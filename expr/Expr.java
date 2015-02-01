@@ -152,7 +152,7 @@ class BinaryExpr extends Expr {
 	case SUB:   return arg0 - arg1;
 	case MUL:   return arg0 * arg1;
 	case DIV:   return arg0 / arg1; // division by 0 has IEEE 754 behavior
-	case POW:   return Math.pow(arg0, arg1);
+	case POW:   return Utils.pow(arg0, arg1);
 	case ATAN2: return Math.atan2(arg0, arg1);
 	case MAX:   return arg0 < arg1 ? arg1 : arg0;
 	case MIN:   return arg0 < arg1 ? arg0 : arg1;
