@@ -31,21 +31,24 @@ public abstract class Expr {
     /** Binary operator: greater than    */  public static final int GT  = 13;
     /** Binary operator: logical and     */  public static final int AND = 14;
     /** Binary operator: logical or      */  public static final int OR  = 15;
-  
-    /** Unary operator: absolute value*/   public static final int ABS   = 100;
-    /** Unary operator: arccosine */       public static final int ACOS  = 101;
-    /** Unary operator: arcsine   */       public static final int ASIN  = 102;
-    /** Unary operator: arctangent*/       public static final int ATAN  = 103;
-    /** Unary operator: ceiling   */       public static final int CEIL  = 104;
-    /** Unary operator: cosine    */       public static final int COS   = 105;
-    /** Unary operator: e to the x*/       public static final int EXP   = 106;
-    /** Unary operator: floor     */       public static final int FLOOR = 107;
-    /** Unary operator: natural log*/      public static final int LOG   = 108;
-    /** Unary operator: negation        */ public static final int NEG   = 109;
-    /** Unary operator: rounding  */       public static final int ROUND = 110;
-    /** Unary operator: sine      */       public static final int SIN   = 111;
-    /** Unary operator: square root */     public static final int SQRT  = 112;
-    /** Unary operator: tangent */         public static final int TAN   = 113;
+
+    /** Unary operator: absolute value*/    public static final int ABS   = 100;
+    /** Unary operator: arccosine */        public static final int ACOS  = 101;
+    /** Unary operator: arcsine   */        public static final int ASIN  = 102;
+    /** Unary operator: arctangent*/        public static final int ATAN  = 103;
+    /** Unary operator: ceiling   */        public static final int CEIL  = 104;
+    /** Unary operator: cosine    */        public static final int COS   = 105;
+    /** Unary operator: e to the x*/        public static final int EXP   = 106;
+    /** Unary operator: floor     */        public static final int FLOOR = 107;
+    /** Unary operator: natural log*/       public static final int LOG   = 108;
+    /** Unary operator: negation*/          public static final int NEG   = 109;
+    /** Unary operator: rounding  */        public static final int ROUND = 110;
+    /** Unary operator: sine      */        public static final int SIN   = 111;
+    /** Unary operator: square root */      public static final int SQRT  = 112;
+    /** Unary operator: tangent */          public static final int TAN   = 113;
+    /** Unary operator: hyp cosine*/        public static final int COSH  = 114;
+    /** Unary operator: hyp sine  */        public static final int SINH  = 115;
+    /** Unary operator: hyp tangent*/       public static final int TANH  = 116;
 
     /** Make a literal expression.
      * @param v the constant value of the expression
@@ -130,6 +133,9 @@ class UnaryExpr extends Expr {
 	case SIN:   return Math.sin(arg);
 	case SQRT:  return Math.sqrt(arg);
 	case TAN:   return Math.tan(arg);
+    case COSH:  return Math.cosh(arg);
+    case SINH:  return Math.sinh(arg);
+    case TANH:  return Math.tanh(arg);
 	default: throw new RuntimeException("BUG: bad rator");
 	}
     }
