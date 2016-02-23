@@ -49,6 +49,9 @@ public abstract class Expr {
     /** Unary operator: hyperbolic cosine*/          public static final int COSH  = 114;
     /** Unary operator: hyperbolic sine  */          public static final int SINH  = 115;
     /** Unary operator: hyperbolic tangent*/         public static final int TANH  = 116;
+    /** Unary operator: inverse hyperbolic cosine*/  public static final int ACOSH = 117;
+    /** Unary operator: inverse hyperbolic sine */   public static final int ASINH = 118;
+    /** Unary operator: inverse hyperbolic tangent*/ public static final int ATANH = 119;
 
     /** Make a literal expression.
      * @param v the constant value of the expression
@@ -136,6 +139,9 @@ class UnaryExpr extends Expr {
             case COSH:  return Math.cosh(arg);
             case SINH:  return Math.sinh(arg);
             case TANH:  return Math.tanh(arg);
+            case ACOSH: return CustomMath.acosh(arg);
+            case ASINH: return CustomMath.asinh(arg);
+            case ATANH: return CustomMath.atanh(arg);
             default: throw new RuntimeException("BUG: bad rator");
         }
     }

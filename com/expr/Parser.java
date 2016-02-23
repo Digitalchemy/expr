@@ -217,13 +217,15 @@ public class Parser {
             "abs", "acos", "asin", "atan",
             "ceil", "cos", "exp", "floor",
             "log", "round", "sin", "sqrt",
-            "tan", "cosh", "sinh", "tanh"
+            "tan", "cosh", "sinh", "tanh",
+            "acosh", "asinh", "atanh"
     };
     static private final int[] rators1 = {
             Expr.ABS, Expr.ACOS, Expr.ASIN, Expr.ATAN,
             Expr.CEIL, Expr.COS, Expr.EXP, Expr.FLOOR,
             Expr.LOG, Expr.ROUND, Expr.SIN, Expr.SQRT,
-            Expr.TAN, Expr.COSH, Expr.SINH, Expr.TANH
+            Expr.TAN, Expr.COSH, Expr.SINH, Expr.TANH,
+            Expr.ACOSH, Expr.ASINH, Expr.ATANH
     };
 
     static private final String[] procs2 = {
