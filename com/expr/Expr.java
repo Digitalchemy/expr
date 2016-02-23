@@ -1,7 +1,7 @@
 // Mathematical expressions.
 // Copyright 1996 by Darius Bacon; see the file COPYING.
 
-package expr;
+package com.expr;
 
 /**
  * A mathematical expression, built out of literal numbers, variables,
