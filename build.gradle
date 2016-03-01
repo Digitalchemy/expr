@@ -35,5 +35,6 @@ publishing {
 }
 
 dependencies {
+    // in order to build jar with dependencies use "gradlew fatJar" command
     compile 'org.apache.commons:commons-math3:3.6'
 }
